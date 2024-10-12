@@ -1,0 +1,3 @@
+[submodule "submodules/wiscodes"]
+	path = submodules/wiscodes
+	url = https://github.com/primusr/wiscodes.git
