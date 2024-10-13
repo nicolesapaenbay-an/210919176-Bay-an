@@ -20,6 +20,7 @@
         <br><br>
 
         <button type="submit" name="submit">Submit</button>
+        <br><br>
     </form>
 
     <?php

@@ -1,8 +1,8 @@
-
-//Loop Control with break and conntinue
-
 <?php
-for ($i = 1; $i <= 10; $i++) {
+echo "Enter the upper limit: ";
+$upperLimit = trim(fgets(STDIN)); // Read user input
+
+for ($i = 1; $i <= $upperLimit; $i++) {
     if ($i == 5) {
         continue; // Skip the number 5
     }
