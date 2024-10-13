@@ -1,3 +1,6 @@
+
+// Activity 4: Loop Control with break and continue
+
 <?php
 echo "Enter the upper limit: ";
 $upperLimit = trim(fgets(STDIN)); // Read user input
