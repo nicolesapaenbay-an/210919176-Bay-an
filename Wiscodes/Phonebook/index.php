@@ -30,6 +30,7 @@
                 echo "<td>" . $row['name'] . "</td>";
                 echo "<td>" . $row['phone'] . "</td>";
                 echo "<td><a href='delete.php?id=" . $row['id'] . "'>Delete</a></td>";
+                echo "<td><a href='edit.php?id=". $row['id'] . "'>Edit</a></td>";
                 echo "</tr>";
             }
         }
