@@ -7,6 +7,7 @@
     <title>Car Inventory CRUD System</title>
 </head>
 <body>
+
     <h2>Car Inventory CRUD System</h2>
 
     <!-- Form to Add New Car -->
@@ -17,6 +18,13 @@
         <input type="number" step="0.01" name="price" placeholder="Price (₱)" required>
         <input type="text" name="supplier" placeholder="Supplier">
         <button type="submit" name="create">Add Car</button>
+    </form>
+
+    <!-- Search Form -->
+    <h3>Search Cars</h3>
+    <form method="GET" action="">
+        <input type="text" name="search" placeholder="Search by Car Model">
+        <button type="submit">Search</button>
     </form>
 
     <h3>Car Inventory List</h3>
@@ -33,8 +41,19 @@
         </tr>
 
         <?php
-        // Fetch all cars from the car_inventory table
+        // Initialize search variable
+        $search_query = '';
+
+        // Check if a search term has been submitted
+        if (isset($_GET['search'])) {
+            $search_query = $_GET['search'];
+        }
+
+        // Fetch cars from the car_inventory table with optional search filtering
         $sql = "SELECT * FROM car_inventory";
+        if (!empty($search_query)) {
+            $sql .= " WHERE car_model LIKE '%" . $conn->real_escape_string($search_query) . "%'";
+        }
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
