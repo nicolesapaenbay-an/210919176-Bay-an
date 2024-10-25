@@ -45,6 +45,7 @@
         <input type="submit" value ="Add Contact">
 
     </form>
+    <br>
     <a href="index.php">Back to Phonebook</a>
     
 </body>

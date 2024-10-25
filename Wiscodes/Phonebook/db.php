@@ -3,7 +3,7 @@
     $servername ="localhost";
     $username ="root";
     $password ="";
-    $dbname ="Phonebook";
+    $dbname ="phonebook";
 
 
     //Create a Connection 

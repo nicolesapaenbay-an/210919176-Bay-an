@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phonebook</title>
 </head>
-<body>
+<br>
     <h2>Phonebook</h2>
 
     <table border="1"> 
@@ -29,7 +29,8 @@
                 echo "<tr>";
                 echo "<td>" . $row['name'] . "</td>";
                 echo "<td>" . $row['phone'] . "</td>";
-                echo "<td>Delete</td>";
+                echo "<td><a href='delete.php?id=" . $row['id'] . "'>Delete</a></td>";
+                echo "</tr>";
             }
         }
         else{
@@ -38,6 +39,9 @@
         ?>
 
     </table>
+    <br>
+    <a href="add.php">Add New Contact</a>
+    </br>
         
 </body>
 </html>
