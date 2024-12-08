@@ -1,0 +1,337 @@
+/* Final Call to Action */
+.cta-final {
+    background-color: #4CAF50;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.cta-buttons .btn,
+.login-form .btn {
+    display: inline-block;
+    padding: 12px 25px; /* Adjusted padding for consistency */
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 16px; /* Adjusted font size for better appearance */
+    text-transform: uppercase; /* Make button text all caps */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.cta-buttons .btn:hover,
+.login-form .btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
+
+/* Services Overview */
+.services-overview {
+    text-align: center;
+    padding: 50px 0;
+}
+.services-carousel {
+    display: flex;
+    justify-content: center;
+}
+.service-card {
+    margin: 0 15px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+}
+.service-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+.services-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.service-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.service-item img {
+    max-width: 150px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+.service-details {
+    flex: 1;
+}
+.service-actions .btn {
+    margin-left: 10px;
+}
+
+/* Centering Available Services text */
+.services-list h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.testimonials h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.testimonial-slider {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Adjust the width of each card */
+    text-align: center;
+}
+
+.testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.testimonial-card p {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.testimonial-card strong {
+    font-weight: bold;
+}
+
+/* Signup Form */
+.signup-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+.signup-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.signup-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+.signup-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.signup-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.signup-form button:hover {
+    background-color: #45a049;
+}
+/* Center the login form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    padding: 20px;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+}
+
+.login-form form {
+    width: 100%;
+    max-width: 400px; /* Max width for the form */
+    background-color: #f9f9f9; /* Light background color for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 16px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.login-form .btn {
+    width: 100%; /* Button will take up the full width of the form */
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.login-form .btn:hover {
+    background-color: #45a049;
+}
+
+/* Center the login form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    padding: 20px;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+}
+
+.login-form form {
+    width: 100%;
+    max-width: 400px; /* Max width for the form */
+    background-color: #f9f9f9; /* Light background color for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 16px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Container for password field and checkbox */
+.password-container {
+    position: relative; /* Position for checkbox inside the container */
+}
+
+.password-container input[type="checkbox"] {
+    position: absolute;
+    right: -200px; /* Align to the right inside the password box */
+    bottom: 10px; /* Align checkbox to the bottom */
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Button styling */
+.login-form .btn {
+    width: 100%; /* Button will take up the full width of the form */
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.login-form .btn:hover {
+    background-color: #45a049;
+}
+
+.dashboard {
+    padding: 20px;
+}
+
+.appointments-section {
+    margin-bottom: 40px;
+}
+
+.appointment-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-item p {
+    margin: 5px 0;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.review-form {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
