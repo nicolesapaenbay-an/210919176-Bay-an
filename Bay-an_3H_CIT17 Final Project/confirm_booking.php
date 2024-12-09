@@ -42,7 +42,9 @@ if ($result) {
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
+            background-image: url('assets/background.jpg');
+            background-size: cover;
+            background-position: center;
             color: #333;
             display: flex;
             justify-content: center;
@@ -52,33 +54,36 @@ if ($result) {
         }
         .confirmation-container {
             text-align: center;
-            padding: 20px;
-            background-color: white;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque */
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 500px;
+            width: 80%;
+            max-width: 600px;
         }
         h2 {
             color: #4CAF50;
-            font-size: 2em;
-            margin-bottom: 20px;
+            font-size: 2.5em; /* Larger size for heading */
+            margin-bottom: 30px;
+            font-weight: bold;
         }
         .confirmation-details p {
-            font-size: 1.1em;
-            margin: 10px 0;
+            font-size: 1.4em; /* Larger font size */
+            margin: 15px 0;
+            line-height: 1.6; /* More spacing between lines */
         }
         .confirmation-details strong {
             font-weight: bold;
         }
         .btn {
             display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
+            margin-top: 30px;
+            padding: 15px 30px;
             background-color: #4CAF50;
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            font-size: 1.2em; /* Bigger button text */
         }
         .btn:hover {
             background-color: #45a049;

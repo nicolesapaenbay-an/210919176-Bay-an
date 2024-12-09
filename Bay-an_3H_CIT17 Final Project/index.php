@@ -6,16 +6,65 @@
     <title>Home - CIT17 Wellness</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <style>
-        /* Hero Section */
-        .hero {
-            background-image: url('assets/spa_banner.jpg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            text-align: center;
-            padding: 100px 20px;
-        }
-    </style>
+    /* Global Background */
+    body {
+        background-image: url('assets/spaa.gif');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-attachment: fixed;
+        color: #fff;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Hero Section */
+    .hero {
+        background-image: url('assets/spa_banner.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        color: black;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow for better readability */
+        padding: 100px 20px;
+    }
+
+    /* Popular Services Section */
+    .services-overview h2 {
+        font-size: 36px;
+        color: #ffcc00; /* Bright color for better visibility */
+        font-family: 'Arial', sans-serif;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow for better readability */
+    }
+
+    .services-carousel .service-card h3 {
+        font-size: 24px;
+        color: #ffcc00; /* Matching color with the section title */
+        font-family: 'Arial', sans-serif;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .services-carousel .service-card p {
+        font-size: 16px;
+        color: whitesmoke /* Keep text readable */
+    }
+
+    /* Button Style */
+    .btn {
+        background-color: #ffcc00;
+        color: #333;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        background-color: #ff9900;
+    }
+</style>
+
 </head>
 <body>
     <?php include 'includes/header.php'; ?>
@@ -24,7 +73,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Your Wellness Journey Starts Here</h1>
-            <p>Experience relaxation and rejuvenation like never before.</p>
+            <p>Experience Relaxation and Rejuvenation like never before.</p>
             <div class="cta-buttons">
                 <a href="booking.php" class="btn">Book Now</a>
                 <a href="services.php" class="btn">View Services</a>
@@ -86,16 +135,14 @@
     </section>
 
     <!-- Final Call to Action -->
-<section class="cta-final">
-    <h2>Ready to Start Your Wellness Journey?</h2>
-    <p>Sign up today and book your first session to experience ultimate relaxation.</p>
-    <div class="cta-buttons">
-        <a href="signup.php" class="btn">Create Account</a>
-        <a href="login.php" class="btn">Login</a> <!-- Added Login button -->
-    </div>
-</section>
-
-
+    <section class="cta-final">
+        <h2>Ready to Start Your Wellness Journey?</h2>
+        <p>Sign up today and book your first session to experience ultimate relaxation.</p>
+        <div class="cta-buttons">
+            <a href="signup.php" class="btn">Create Account</a>
+            <a href="login.php" class="btn">Login</a>
+        </div>
+    </section>
 
     <!-- Footer -->
     <?php include 'includes/footer.php'; ?>

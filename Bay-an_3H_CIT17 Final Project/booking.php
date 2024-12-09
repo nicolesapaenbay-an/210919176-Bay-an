@@ -6,34 +6,159 @@
     <title>Book an Appointment - CIT17 Wellness</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <style>
-        /* Booking Page Styles */
-        .booking-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 50px;
+    /* General Page Styles */
+    body {
+        background-image: url('assets/background.jpg'); /* Replace with your image path */
+        background-size: cover; /* Ensure the image covers the entire page */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Prevent the image from repeating */
+        background-attachment: fixed; /* Keep the background fixed during scrolling */
+        font-family: 'Arial', sans-serif; /* Use a clean, readable font */
+        color: #333; /* Set a dark text color for contrast */
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+
+    /* Container Styles */
+    .booking-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent background */
+        padding: 30px;
+        margin: 50px auto;
+        width: 90%;
+        max-width: 1000px;
+        border-radius: 15px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    }
+
+    h1 {
+        font-size: 2.5em;
+        color: #4CAF50; /* Match the button color */
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.8em;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    label {
+        font-size: 1.1em;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+    }
+
+    select,
+    input[type="date"],
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1em;
+        background-color: #f9f9f9;
+        transition: border-color 0.3s;
+    }
+
+    select:focus,
+    input:focus {
+        border-color: #4CAF50;
+        outline: none;
+    }
+
+    /* Form Steps */
+    .step {
+        margin-bottom: 30px;
+        padding: 20px;
+        background-color: #f8f8f8;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .step p {
+        font-size: 1em;
+        margin: 10px 0;
+    }
+
+    .btn {
+        margin-top: 20px;
+        display: inline-block;
+        padding: 12px 30px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 50px; /* Make the button rounded */
+        font-size: 1.1em;
+        transition: background-color 0.3s, transform 0.2s;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: #45a049;
+        transform: scale(1.05); /* Slightly enlarge the button on hover */
+    }
+
+    .btn:active {
+        transform: scale(1); /* Reset scale on click */
+    }
+
+    /* Summary Styles */
+    #service-summary,
+    #therapist-summary,
+    #price-summary,
+    #date-summary,
+    #time-summary {
+        font-weight: bold;
+        color: #4CAF50;
+    }
+
+    /* Promo Code Input */
+    #promo-code {
+        width: calc(100% - 20px);
+        font-size: 1em;
+        margin-top: 10px;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2em;
         }
-        .booking-form {
-            width: 80%;
-            max-width: 800px;
-            margin: 20px;
-        }
-        .step {
-            margin-bottom: 20px;
-        }
+
         .btn {
-            margin-top: 20px;
-            display: inline-block;
             padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
+            font-size: 1em;
         }
-        .btn:hover {
-            background-color: #45a049;
+
+        .booking-container {
+            width: 95%;
         }
-    </style>
+    }
+
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 1.8em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        label {
+            font-size: 1em;
+        }
+    }
+</style>
+
 </head>
 <body>
     <?php include 'includes/header.php'; ?>
