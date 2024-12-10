@@ -196,13 +196,13 @@
                 <select name="therapist" id="therapist" required>
                     <?php
                     // Fetch therapists from the database
-                    $query = "SELECT * FROM therapists";
+                    $query = "SELECT * FROM users WHERE role = 'therapist'";
                     $result = mysqli_query($conn, $query);
 
                     // Check if therapists are available
                     if (mysqli_num_rows($result) > 0) {
                         while ($therapist = mysqli_fetch_assoc($result)) {
-                            echo "<option value='{$therapist['therapist_id']}'>{$therapist['therapist_name']}</option>";
+                            echo "<option value='{$therapist['user_id']}'>{$therapist['full_name']}</option>";
                         }
                     } else {
                         echo "<option>No therapists available</option>";
