@@ -34,9 +34,6 @@ $result = mysqli_query($conn, $query);
 
 // Check if the booking was successful
 if ($result) {
-    // Send a confirmation email to the user (optional)
-    // Code for email could go here
-
     // Display confirmation message
     echo "
     <style>
