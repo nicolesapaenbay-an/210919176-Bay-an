@@ -3,20 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Admin Dashboard - CIT17 Wellness</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* Global Styles */
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #ecf0f1;
+            font-size: 18px;
+            padding: 10px;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #34495e;
+        }
+
+        /* Content Section */
+        .content {
+            margin-left: 270px;
+            padding: 30px;
+        }
+
+        /* Heading Style */
+        .content h1 {
+            font-size: 36px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 28px;
+            color: #e67e22;
+            margin-bottom: 15px;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        th {
+            background-color: #2980b9;
+            color: white;
+        }
+
+        td {
+            background-color: #ecf0f1;
+        }
+
+        /* Button Styles */
+        .btn {
+            background-color: #ffcc00;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #f39c12;
+        }
+
+        /* Card Style for Service & Therapist Management */
+        .card {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .card h3 {
+            font-size: 24px;
+            color: #2c3e50;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #7f8c8d;
+        }
+
+        /* Form Styles */
+        .form-container {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .form-container input,
+        .form-container select,
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            background-color: #2980b9;
+            color: white;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #3498db;
+        }
+
+        /* Media Query for Mobile View */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+                padding: 10px;
+            }
+
+            .content {
+                margin-left: 220px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Sidebar -->
     <div class="sidebar">
+        <h2>Admin Panel</h2>
         <ul>
             <li><a href="view_bookings.php">Manage Bookings</a></li>
             <li><a href="add_service.php">Manage Services</a></li>
             <li><a href="manage_availability.php">Therapist Availability</a></li>
+            <li><a href="payments.php">Payments</a></li>
+            <li><a href="reports.php">Reports</a></li>
         </ul>
     </div>
 
+    <!-- Content Area -->
     <div class="content">
-        <!-- Content for each section will be dynamically loaded here -->
+        <h1>Admin Dashboard</h1>
+        
+        <!-- Manage Bookings Section -->
+        <section>
+            <h2>Manage Bookings</h2>
+            <div class="card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Booking ID</th>
+                            <th>Customer Name</th>
+                            <th>Service</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1234</td>
+                            <td>John Doe</td>
+                            <td>Relaxing Massage</td>
+                            <td>Pending</td>
+                            <td>
+                                <a href="#" class="btn">Approve</a>
+                                <a href="#" class="btn">Cancel</a>
+                                <a href="#" class="btn">Reschedule</a>
+                            </td>
+                        </tr>
+                        <!-- Additional rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Manage Services Section -->
+        <section>
+            <h2>Manage Services</h2>
+            <div class="card">
+                <p>List of available services. You can edit or delete existing services, or add new services.</p>
+                <a href="add_service.php" class="btn">Add New Service</a>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Service Name</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Relaxing Massage</td>
+                            <td>A soothing massage for relaxation.</td>
+                            <td>500 PHP</td>
+                            <td><a href="edit_service.php" class="btn">Edit</a> <a href="#" class="btn">Delete</a></td>
+                        </tr>
+                        <!-- Additional rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Therapist Availability Section -->
+        <section>
+            <h2>Therapist Availability</h2>
+            <div class="card">
+                <p>Manage therapist working hours and availability schedule.</p>
+                <a href="add_availability.php" class="btn">Add Availability</a>
+                <!-- Calendar or list of therapists' availability goes here -->
+            </div>
+        </section>
+
+        <!-- Payments Section -->
+        <section>
+            <h2>Payments</h2>
+            <div class="card">
+                <p>List of all payments and transactions.</p>
+                <!-- Payment Table goes here -->
+            </div>
+        </section>
+
+        <!-- Reports Section -->
+        <section>
+            <h2>Reports</h2>
+            <div class="card">
+                <p>View booking and earnings reports, as well as customer satisfaction trends.</p>
+                <!-- Reports or graphs go here -->
+            </div>
+        </section>
     </div>
 </body>
 </html>
